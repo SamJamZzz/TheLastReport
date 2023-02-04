@@ -7,7 +7,9 @@ export default function ReportsListItem(props) {
   return (
     <div className="flex justify-between text-white backdrop-brightness-50 p-3">
       <div>
+        {/* get address from api? */}
         <h2 className="text-2xl font-semibold">48th & Walter St.</h2>
+        {/* get distance from api? */}
         <p>0.4km away | {props.report.lat}, {props.report.lon}</p>
         <p className="text-sm">Reported <Moment fromNow>{props.report.time}</Moment> by {props.report.user}</p>
         <br />
