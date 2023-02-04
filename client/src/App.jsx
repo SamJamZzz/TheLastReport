@@ -7,8 +7,9 @@ function App() {
     <div>
       <Navbar />
       <div className='flex h-screen'>
-        <ReportsList />
         <InstructionsModal />
+        <ReportsList />
+        {/* map goes below */}
         <div>asdasdasd</div>
       </div>
     </div>
