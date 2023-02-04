@@ -1,16 +1,21 @@
-export default function ReportsListItem() {
+import Moment from 'react-moment';
+
+export default function ReportsListItem(props) {
+  const infectedTypes = props.report.types;
+  const infectedTypesList = infectedTypes.join(", ");
+
   return (
     <div className="flex justify-between text-white backdrop-brightness-50 p-3">
       <div>
         <h2 className="text-2xl font-semibold">48th & Walter St.</h2>
-        <p>0.4km away | 42.386287, -71.049275</p>
-        <p className="text-sm">Reported 4 days ago by Joel</p>
+        <p>0.4km away | {props.report.lat}, {props.report.lon}</p>
+        <p className="text-sm">Reported <Moment fromNow>{props.report.time}</Moment> by {props.report.user}</p>
         <br />
-        <p>Clickers, Runners, Bloaters</p>
-        <p><strong>25-50</strong> last reported heading <strong>north</strong></p>
+        <p>{infectedTypesList}</p>
+        <p><strong>{props.report.amount}</strong> last reported heading <strong>{props.report.direction}</strong></p>
       </div>
       <div className="flex self-end">
-        <p>REPORT #0681</p>
+        <p>REPORT #{props.report.id}</p>
       </div>
     </div>
   );
