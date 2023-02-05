@@ -35,6 +35,7 @@ export default function Form() {
         disablePortal
         options={compassDirections}
         renderInput={(params) => <TextField {...params} label="North, East, South, West" />}
+        sx={{ input: { color: 'white' } }}
       />
       <h2 className="text-xl font-semibold m-1 mt-4">Amount</h2>
       <Slider
