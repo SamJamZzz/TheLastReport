@@ -2,17 +2,17 @@ import Form from './components/Form';
 import InstructionsModal from './components/InstructionsModal';
 import Navbar from './components/Navbar';
 import ReportsList from './components/ReportsList';
+import Map from './components/Map';
 
 function App() {
   return (
     <div>
       <Navbar />
       <div className='flex h-screen'>
-        <InstructionsModal />
         <ReportsList />
+        <Map />
+        <InstructionsModal />
         <Form />
-        {/* map goes below */}
-        <div>asdasdasd</div>
       </div>
     </div>
   );
