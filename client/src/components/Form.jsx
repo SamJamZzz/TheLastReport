@@ -1,5 +1,7 @@
 import TextField from '@mui/material/TextField';
 import Slider from '@mui/material/Slider';
+import FormControlLabel from '@mui/material/FormControlLabel';
+import Checkbox from '@mui/material/Checkbox';
 
 export default function Form() {
   const infectedTypes = ["Stalkers", "Runners", "Clickers", "Shamblers", "Bloaters", "Rat King"];
@@ -7,8 +9,7 @@ export default function Form() {
   const infectedCheckboxList = infectedTypes.map(type => {
     return (
       <div key={infectedTypes.indexOf(type)}>
-        <input type="checkbox" id={type} value={type} className='m-1'/>
-        <label for={type}>{type}</label>
+        <FormControlLabel control={<Checkbox defaultUnchecked />} label={type} />
       </div>
     )
   });
